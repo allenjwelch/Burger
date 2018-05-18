@@ -3,7 +3,7 @@ const burger = require('../models/burger.js');
 const router = express.Router(); 
 
 // Create the `router` for the app, and export the `router` at the end of your file.
-routter.get('/', function(req, res) {
+router.get('/', function(req, res) {
   burger.selectAll(function(data) {
     let hbsObj = {
       burgers: data
