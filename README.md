@@ -4,7 +4,7 @@ _Basic CRUD application where users can create, read, update, and delete entries
 
 User can create a new burger and specify whether or not the burger has been already or not yet eaten. User can then either change the status of each burger from 'Uneaten' to 'Devoured' or delete the burger from the database entirely. 
 
-![titleImage](/assets/img/title.PNG)
+![titleImage](/public/assets/img/title.PNG)
 
 ## Build Status
 ![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg)
