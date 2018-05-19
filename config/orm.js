@@ -47,8 +47,12 @@ const orm = {
     // UPDATE table_name
     // SET column1 = value1, column2 = value2, ...
     // WHERE condition;
+    console.log('table: ' + table); 
+    console.log('objColVals: ' + objToSql(objColVals)); 
+    console.log('condition: ' + condition); 
+
     let qString = `UPDATE ${table} SET ${objToSql(objColVals)} `; 
-    qString = `WHERE ${condition};`; 
+    qString += `WHERE ${condition};`; 
 
     console.log(qString); 
 
