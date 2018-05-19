@@ -4,11 +4,15 @@
 		<img class="card-img-top mx-auto" src="./assets/img/burger.png" style="width:150px; height: 150px" alt="burger">
 		<div class="card-body">
     	<h5 class="card-title text-center">{{burger_name}}</h5>
-			<button class="change" data-id="{{id}}" data-devour="{{devoured}}">
+			{{!-- <button class="change" data-id="{{id}}" data-devour="{{devoured}}">
 		{{#if devoured}}Hungry? Eat it!{{else}}Eat it again!{{/if}}
-	</button>
+	</button> --}}
 
-	<button class="delBurger" data-id="{{id}}">DELETE</button>
+	<button type="button" class="btn btn-info change" data-id="{{id}}" data-devour="{{devoured}}">{{#if devoured}}Hungry? Eat it!{{else}}Eat it again!{{/if}}</button>
+
+<button type="button" class="btn btn-danger delBurger" data-id="{{id}}">DELETE</button>
+
+	{{!-- <button class="delBurger" data-id="{{id}}">DELETE</button> --}}
 		</div>
 	</div>
 

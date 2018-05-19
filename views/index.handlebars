@@ -1,23 +1,28 @@
-<div class="jumbotron w-75 p-3 mx-auto bg-overlay text-center">
-  <h1 class="display-4">Burger Time!</h1>
-  <p class="lead">Make a burger, eat a burger, repeat...</p>
-  <hr class="my-4">
-  <h5>Make a new burger</h5>
-  <form class="create-form text-left">
+<div class="container">
+  <div class="jumbotron w-75 p-3 mx-auto bg-overlay text-center" id="jumbo">
+    <h1 class="display-4">Burger Time!</h1>
+    <hr>
+    <p class="lead">Make a burger, eat a burger, repeat...</p>
+    <hr class="my-4">
+    <form class="create-form text-left">
+    <h5>Make a new burger</h5>
 
-    <div class="form-group">
-      <label for="burger">Burger Name:</label>
-      <input type="text" id="burger" name="name">
-    </div>
+      <div class="form-group">
+        <label for="burger">Burger Name:</label>
+        <input type="text" id="burger" name="name">
+      </div>
 
-    <div class="form-group">
-      <label for="devoured">Eaten yet??</label><br>
-      <input type="radio" name="devoured" value="0" checked> Not yet<br>
-      <input type="radio" name="devoured" value="1"> Already eaten
-    </div>
+      <div class="form-group">
+        <label for="devoured">Eaten yet??</label><br>
+        <input type="radio" name="devoured" value="0" checked> Not yet<br>
+        <input type="radio" name="devoured" value="1"> Already eaten
+      </div>
 
-    <button type="submit">Add Burger</button>
-  </form>
+      <button type="submit" class="btn btn-success">Add Burger</button>
+
+      {{!-- <button type="submit">Add Burger</button> --}}
+    </form>
+  </div>
 </div>
 
 <div class="container" style="width:100%">
