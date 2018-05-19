@@ -36,7 +36,9 @@ const orm = {
     let qString = `INSERT INTO ${table} (${cols.toString()}) `; 
     qString += `VALUES (${printQuestionMarks(vals.length)});`;
 
-    console.log(qString); 
+    // console.log('cols: ' + cols); 
+    // console.log('vals: ' + vals); 
+    // console.log('qString: ' + qString); 
 
     connection.query(qString, vals, function(err, result) {
       if (err) {throw err;} 
@@ -47,9 +49,10 @@ const orm = {
     // UPDATE table_name
     // SET column1 = value1, column2 = value2, ...
     // WHERE condition;
-    console.log('table: ' + table); 
-    console.log('objColVals: ' + objToSql(objColVals)); 
-    console.log('condition: ' + condition); 
+
+    // console.log('table: ' + table); 
+    // console.log('objColVals: ' + objToSql(objColVals)); 
+    // console.log('condition: ' + condition); 
 
     let qString = `UPDATE ${table} SET ${objToSql(objColVals)} `; 
     qString += `WHERE ${condition};`; 
@@ -58,7 +61,20 @@ const orm = {
 
     connection.query(qString, function(err, result) {
       if (err) {throw err;}
-      cd(result); 
+      cb(result); 
+    });
+  }, 
+  delete: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
     });
   }
 }; 

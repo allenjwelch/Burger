@@ -1,3 +1,40 @@
+* {
+  color:black; 
+}
+
 body {
-  background: url('/assets/img/bobsBurgers.png'); 
+  background: url('/assets/img/bobsBurgers2.png'); 
+  margin: 50px;
+  padding: 50px;
+}
+
+h2 {
+  color: rgb(206, 194, 194); 
+}
+
+.jumbotron {
+  background: blue; 
+  background-color: blue; 
+  opacity: 50%; 
+  color: blue; 
+}
+
+.jumbotron > form-group {
+  color: black; 
+}
+
+img {
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+.card-title {
+  color: black; 
+}
+
+button {
+  color: black; 
 }

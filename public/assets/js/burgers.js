@@ -28,10 +28,13 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#burger").val().trim(),
-      sleepy: $("[name=devoured]:checked").val().trim()
+      burger_name: $("#burger").val().trim(),
+      devoured: $("[name=devoured]:checked").val().trim()
     };
 
+    console.log('newBurger: ' + newBurger);
+    console.log('name: ' + newBurger.name);
+    console.log('devoured: ' + newBurger.devoured);
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
@@ -46,8 +49,10 @@ $(function() {
   });
 
   $('.delBurger').on('click', function(event) {
+    console.log('delete'); 
     event.preventDefault();
     var id = $(this).data("id");
+    console.log(id); 
     // Send the DELETE request.
     $.ajax("/api/burgers/" + id, {
       type: "DELETE"
